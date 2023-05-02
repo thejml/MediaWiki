@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag mediawiki-expanded:$(date +%Y%m%d)
+      run: docker build . --file Dockerfile --tag thejml/mediawiki-expanded:$(date +%Y%m%d)
     - name: Push Docker Image
-      run: docker login -u thejml -p dckr_pat_dsRtQV8PlaKS2uH-fVoivIM5Smg && docker push mediawiki-expanded:$(date +%Y%m%d) 
+      run: docker login -u thejml -p dckr_pat_dsRtQV8PlaKS2uH-fVoivIM5Smg && docker push thejml/mediawiki-expanded:$(date +%Y%m%d) 
